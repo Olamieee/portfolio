@@ -1,13 +1,14 @@
 :root {
-    --primary-color: #5664d2;
-    --primary-light: #7a85db;
-    --primary-dark: #3e4bb3;
-    --secondary-color: #3bd9a5;
+    /* Updated color scheme with better harmony */
+    --primary-color: #3a5cbd;
+    --primary-light: #6b85d5;
+    --primary-dark: #284189;
+    --secondary-color: #3db0a0;
     --text-color: #333333;
     --text-light: #666666;
     --bg-color: #ffffff;
     --bg-alt: #f5f7ff;
-    --accent-color: #ff7e5f;
+    --accent-color: #ff6b4a;
     --border-radius: 12px;
     --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     --transition-fast: all 0.3s ease;
@@ -108,11 +109,11 @@ section:nth-child(even) {
     background-color: var(--bg-alt);
 }
 
-/* Header Styles */
+/* Header Styles - Fixed positioning issues */
 header {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 50vh;
+    min-height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,6 +159,23 @@ header {
     margin: 0 auto;
     padding: 2rem;
     animation: fadeIn 1.5s ease-out;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Add subtle overlay */
+    position: relative;
+    /* Added to ensure child elements position properly */
+    z-index: 1;
+    /* Ensure content appears above background */
+}
+
+.header-cta {
+    margin-top: 2rem;
+    background: var(--secondary-color);
+    box-shadow: 0 5px 15px rgba(61, 176, 160, 0.4);
+}
+
+.header-cta:hover {
+    background: var(--accent-color);
+    box-shadow: 0 8px 25px rgba(255, 107, 74, 0.5);
 }
 
 .name-highlight {
@@ -354,7 +372,7 @@ nav {
 
 .skill-tag:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(86, 100, 210, 0.3);
+    box-shadow: 0 5px 15px rgba(58, 92, 189, 0.3);
 }
 
 /* Projects Section */
@@ -416,7 +434,7 @@ nav {
 }
 
 .project-tag {
-    background-color: rgba(86, 100, 210, 0.1);
+    background-color: rgba(58, 92, 189, 0.1);
     color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -440,7 +458,7 @@ nav {
     background: var(--primary-dark);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(86, 100, 210, 0.3);
+    box-shadow: 0 10px 20px rgba(58, 92, 189, 0.3);
 }
 
 /* Experience Section */
@@ -490,7 +508,7 @@ nav {
     font-weight: 600;
     font-size: 1.4rem;
     padding: 0.5rem 1.5rem;
-    background-color: rgba(86, 100, 210, 0.1);
+    background-color: rgba(58, 92, 189, 0.1);
     border-radius: 50px;
 }
 
@@ -503,6 +521,7 @@ nav {
 
 .experience-item ul {
     padding-left: 2rem;
+    list-style-type: none;
 }
 
 .experience-item li {
@@ -548,7 +567,7 @@ nav {
     content: "";
     font-family: serif;
     font-size: 12rem;
-    color: rgba(86, 100, 210, 0.1);
+    color: rgba(58, 92, 189, 0.1);
     position: absolute;
     top: -2rem;
     left: 1rem;
@@ -668,7 +687,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-dark), #2a3580);
+    background: linear-gradient(135deg, var(--primary-dark), #1d2b5d);
     z-index: -1;
 }
 
@@ -710,7 +729,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 20px rgba(86, 100, 210, 0.4);
+    box-shadow: 0 5px 20px rgba(58, 92, 189, 0.4);
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-fast);
@@ -776,9 +795,7 @@ footer {
     }
 }
 
-/* Add this script to make the back to top button work */
-/* This will apply animation classes to elements as they become visible during scroll */
-/* Place this in script tag at end of your HTML */
+/* Animation classes for scroll effects */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -788,6 +805,125 @@ footer {
 .animate-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    color: white;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    position: relative;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--primary-dark);
+}
+
+.mobile-menu-toggle.active {
+    background: var(--accent-color);
+}
+
+/* Loading animation for the page */
+.page-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loading.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(58, 92, 189, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navigation active states */
+.nav-active {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    width: 80%;
+}
+
+.nav-scrolled {
+    padding: 5px 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* For when someone wants to print the portfolio */
+@media print {
+
+    nav,
+    .back-to-top,
+    .social-links {
+        display: none !important;
+    }
+
+    body,
+    html {
+        background: white !important;
+    }
+
+    * {
+        color: black !important;
+        box-shadow: none !important;
+    }
+
+    section {
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Improve anchor position for fixed header */
+:target {
+    scroll-margin-top: 100px;
 }
 
 /* Media Queries for Responsiveness */
@@ -823,10 +959,6 @@ footer {
         left: 50%;
         transform: translateX(-50%);
     }
-
-    section:hover h2::after {
-        width: 120px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -851,12 +983,37 @@ footer {
     }
 
     .nav-links {
-        display: none;
-        /* For mobile menu - add a toggle button */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li a {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .nav-links li a::after {
+        background: white;
     }
 
     .mobile-menu-toggle {
-        display: block;
+        display: flex;
     }
 
     .experience-header {
@@ -871,6 +1028,11 @@ footer {
 
     section {
         padding: 70px 0;
+    }
+
+    .nav-container {
+        padding: 0 2rem;
+        justify-content: space-between;
     }
 }
 
@@ -903,233 +1065,19 @@ footer {
         right: 20px;
         bottom: 20px;
     }
-}
 
-/* Mobile Menu Styles */
-.mobile-menu-toggle {
-    display: none;
-    width: 40px;
-    height: 40px;
-    background: var(--primary-color);
-    border-radius: 5px;
-    color: white;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: var(--transition-fast);
-    position: relative;
-    z-index: 1001;
-}
-
-.mobile-menu-toggle:hover {
-    background: var(--primary-dark);
-}
-
-.mobile-menu-toggle.active {
-    background: var(--accent-color);
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: var(--primary-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        transform: translateY(-100%);
-        transition: transform 0.5s ease;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-    }
-
-    .nav-links li a {
-        color: white;
-        font-size: 2rem;
-    }
-
-    .nav-links li a::after {
-        background: white;
-    }
-}
-
-/* Fix for navigation on small screens */
-@media (max-width: 576px) {
-    .nav-container {
-        padding: 0 2rem;
-        justify-content: space-between;
-    }
-
-    .nav-links {
-        gap: 1.5rem;
-    }
-
-    .nav-links li a {
-        font-size: 1.8rem;
-        padding: 8px 12px;
-    }
-}
-
-/* Additional animations for better user experience */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Add subtle animation to buttons and interactive elements */
-.cta-button:hover,
-.social-links a:hover,
-.contact-method:hover .contact-icon {
-    animation: pulse 1.5s infinite;
-}
-
-/* Smooth section transitions */
-section {
-    transition: background-color 0.5s ease;
-}
-
-/* Improve skill tag animations */
-.skill-tag {
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-tag::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
-    opacity: 0;
-}
-
-.skill-tag:hover::before {
-    opacity: 1;
-    transform: rotate(45deg) translateY(-150%);
-}
-
-/* Enhanced section transitions */
-.container {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 1s ease;
-}
-
-section.in-view .container {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Additional hover effects for project cards */
-.project-card {
-    position: relative;
-    z-index: 1;
-}
-
-.project-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary-light), var(--secondary-color));
-    opacity: 0;
-    z-index: -1;
-    transition: var(--transition-medium);
-    border-radius: var(--border-radius);
-}
-
-.project-card:hover::before {
-    opacity: 0.05;
-}
-
-/* Improved testimonial hover effects */
-.testimonial-author-img {
-    transition: var(--transition-medium);
-}
-
-.testimonial:hover .testimonial-author-img {
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* Loading animation for the page */
-.page-loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.page-loading.loaded {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.loading-spinner {
-    width: 50px;
-    height: 50px;
-    border: 5px solid rgba(86, 100, 210, 0.2);
-    border-radius: 50%;
-    border-top-color: var(--primary-color);
-    animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Making sure header content is fully responsive */
-@media (max-width: 480px) {
     .header-content h1 {
-        font-size: 3.2rem;
+        font-size: 5rem;
+        /* Increased size */
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
     }
 
     .header-content p {
-        font-size: 1.6rem;
-    }
-
-    .specialization-item {
-        padding: 1.5rem;
+        font-size: 1.8rem;
+        max-width: 600px;
+        margin: 0 auto;
+        letter-spacing: 0.5px;
     }
 
     .testimonial-content {
@@ -1141,16 +1089,6 @@ section.in-view .container {
     }
 }
 
-/* Additional focus states for accessibility */
-a:focus,
-button:focus,
-.cta-button:focus,
-.mobile-menu-toggle:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
-}
-
-/* Improving the layout of project cards on very small screens */
 @media (max-width: 340px) {
     .projects {
         grid-template-columns: 1fr;
@@ -1160,144 +1098,4 @@ button:focus,
         font-size: 1.2rem;
         padding: 0.4rem 1rem;
     }
-}
-
-/* Add these styles to your CSS file */
-
-/* Navigation active state */
-.nav-active {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 0.98);
-}
-
-.nav-links a.active {
-    color: var(--primary-color);
-}
-
-.nav-links a.active::after {
-    width: 80%;
-}
-
-/* Additional styling for sticky navigation */
-.nav-scrolled {
-    padding: 5px 0;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Style for form inputs if you add a contact form later */
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid #e1e1e1;
-    border-radius: var(--border-radius);
-    font-family: var(--font-main);
-    transition: var(--transition-fast);
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(86, 100, 210, 0.1);
-}
-
-/* Typography enhancements */
-p {
-    line-height: 1.8;
-}
-
-/* Improved project image container */
-.project-image-container {
-    overflow: hidden;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-/* Fix list styles in experience section */
-.experience-item ul {
-    list-style-type: none;
-}
-
-/* Improved footer styling */
-footer p {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Print styles for when someone wants to print your portfolio */
-@media print {
-
-    nav,
-    .back-to-top,
-    .social-links {
-        display: none !important;
-    }
-
-    body,
-    html {
-        background: white !important;
-    }
-
-    * {
-        color: black !important;
-        box-shadow: none !important;
-    }
-
-    section {
-        padding: 20px 0 !important;
-        page-break-inside: avoid;
-    }
-
-    .container {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* Preloader animation for images */
-img {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-img.loaded {
-    opacity: 1;
-}
-
-/* Improve anchor position accounting for fixed header */
-:target {
-    scroll-margin-top: 100px;
-}
-
-/* Add subtle text shadow to main heading */
-.header-content h1 {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Add subtle animation to header background */
-.header-bg {
-    animation: gradientShift 15s ease infinite;
-    background-size: 200% 200%;
-}
-
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Make sure the first section after header doesn't have awkward spacing */
-header+section {
-    margin-top: -1px;
 }
