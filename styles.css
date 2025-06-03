@@ -110,6 +110,7 @@ section:nth-child(even) {
 }
 
 /* Header Styles - Fixed positioning issues */
+/* Header Styles - Updated with background image */
 header {
     position: relative;
     height: 50vh;
@@ -128,10 +129,76 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: 
+        linear-gradient(135deg, rgba(58, 92, 189, 0.8), rgba(40, 65, 137, 0.9)),
+        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     z-index: -1;
+    transition: transform 0.3s ease;
 }
 
+/* Alternative background options - uncomment one of these instead of the above if you prefer */
+
+/* Option 1: Tech/Circuit board background */
+/*
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(58, 92, 189, 0.85), rgba(40, 65, 137, 0.9)),
+        url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+*/
+
+/* Option 2: Abstract geometric background */
+/*
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(58, 92, 189, 0.8), rgba(40, 65, 137, 0.85)),
+        url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+*/
+
+/* Option 3: Data visualization background */
+/*
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(58, 92, 189, 0.8), rgba(40, 65, 137, 0.9)),
+        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+*/
+
+/* Option 4: Code/Programming background */
+/*
+.header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(135deg, rgba(58, 92, 189, 0.85), rgba(40, 65, 137, 0.9)),
+        url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    z-index: -1;
+}
+*/
+
+/* Parallax effect on scroll (optional enhancement) */
 .header-bg::before {
     content: "";
     position: absolute;
@@ -139,10 +206,17 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
-    opacity: 0.2;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.1;
     animation: pan-bg 30s infinite linear;
 }
+
+/* Enhanced hover effect for the header */
+header:hover .header-bg {
+    transform: scale(1.02);
+}
+
+
 
 @keyframes pan-bg {
     0% {
@@ -154,17 +228,17 @@ header {
     }
 }
 
+/* Ensure text remains readable */
 .header-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     animation: fadeIn 1.5s ease-out;
-    background-color: rgba(0, 0, 0, 0.2);
-    /* Add subtle overlay */
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly darker overlay for better text readability */
+    backdrop-filter: blur(2px); /* Subtle blur effect */
+    border-radius: 15px;
     position: relative;
-    /* Added to ensure child elements position properly */
     z-index: 1;
-    /* Ensure content appears above background */
 }
 
 .header-cta {
