@@ -1,414 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olamide Alonge | Machine Learning Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Alonge Olamide Samson - Portfolio 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <header>
-        <div class="header-bg"></div>
-        <div class="header-content">
-            <h1><span class="name-highlight">Olamide Alonge</span></h1>
-            <p>Machine Learning Engineer | Data Scientist | Software Automation Expert</p>
-            <a href="https://wa.link/ulvhzj" class="cta-button header-cta">Get In Touch</a>
-        </div>
-    </header>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-circle"></div>
+    </div>
 
-    <nav>
-        <div class="nav-container">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Alonge Olamide Samson</a>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="about">
+    <!-- Header -->
+    <header id="home" class="section">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="typewriter">Alonge Olamide Samson</h1>
+                <p class="subheading">Machine Learning Engineer | Data Scientist | Automation Specialist 🌟</p>
+                <a href="#contact" class="btn-primary">Connect With Me 🤝</a>
+            </div>
+        </div>
+        <div class="header-bg"></div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <div class="profile">
-                <img src="me.jpg" alt="Olamide Alonge" class="profile-img">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="me.jpg" alt="Alonge Olamide Samson" class="avatar">
+                </div>
                 <div class="about-text">
-                    <p>Hello! I'm a highly motivated Computer Science graduate with a strong background in machine
-                        learning, data science, and software automation. I have a passion for developing innovative
-                        solutions, implementing data-driven insights, and creating efficient automated systems.</p>
-                    <p>With a proven track record in developing predictive models and custom machine learning
-                        algorithms, I've worked on various projects ranging from recommendation systems to emotion
-                        detection models. I'm particularly interested in natural language processing, predictive
-                        modeling, and automation technologies.</p>
-                    <p>When I'm not coding or training models, you can find me contributing to open-source projects,
-                        participating in hackathons, or enjoying hiking and outdoor activities.</p>
+                    <p>I'm Alonge, a passionate Computer Science graduate focused on machine learning, data science, and automation. My goal is to build innovative solutions that turn data into insights and optimize processes. 💡</p>
+                    <p>With expertise in predictive modeling, NLP, and automation, I’ve delivered projects like hate speech detection and recommendation systems. I love tackling complex challenges with cutting-edge tech. 🚀</p>
+                    <p>When not coding, I’m contributing to open-source, competing in hackathons, or hiking outdoors. 🌄</p>
                 </div>
-            </div>
-
-            <div class="specialization">
-                <div class="specialization-content">
-                    <h3><i class="fas fa-star"></i> What I Specialize In</h3>
-                    <div class="specialization-list">
+                <div class="about-specializations">
+                    <h3>Specializations</h3>
+                    <div class="specialization-grid">
                         <div class="specialization-item">
-                            <h4><i class="fas fa-brain"></i> Predictive Modeling</h4>
-                            <p>Developing accurate machine learning models that deliver actionable predictions from
-                                complex datasets.</p>
+                            <i class="fas fa-brain"></i>
+                            <h4>Predictive Modeling</h4>
+                            <p>Building precise ML models for actionable predictions.</p>
                         </div>
                         <div class="specialization-item">
-                            <h4><i class="fas fa-comments"></i> Natural Language Processing</h4>
-                            <p>Creating systems that understand, analyze, and generate human language with advanced NLP
-                                techniques.</p>
+                            <i class="fas fa-language"></i>
+                            <h4>NLP</h4>
+                            <p>Creating systems to analyze and generate human language.</p>
                         </div>
                         <div class="specialization-item">
-                            <h4><i class="fas fa-robot"></i> Process Automation</h4>
-                            <p>Designing efficient automation workflows that save time, reduce errors, and optimize
-                                resource usage.</p>
-                        </div>
-                        <div class="specialization-item">
-                            <h4><i class="fas fa-chart-line"></i> Data-Driven Decision Making</h4>
-                            <p>Transforming raw data into meaningful insights that guide strategic business decisions.
-                            </p>
+                            <i class="fas fa-cogs"></i>
+                            <h4>Automation</h4>
+                            <p>Designing workflows to optimize efficiency.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="skills">
-        <div class="container">
-            <h2>Skills & Expertise</h2>
-            <div class="skills">
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Predictive Modeling</span>
-                        <span class="skill-tag">Data Mining</span>
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">Natural Language Processing</span>
-                        <span class="skill-tag">Text Preprocessing</span>
-                        <span class="skill-tag">Statistical Analysis</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Keras</span>
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">PostgreSQL</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Self-motivated</span>
-                        <span class="skill-tag">Diligent</span>
-                        <span class="skill-tag">Team Player</span>
-                        <span class="skill-tag">Problem-solving</span>
-                        <span class="skill-tag">Communication</span>
-                        <span class="skill-tag">Ethical</span>
-                        <span class="skill-tag">Punctual</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="projects">
-    
-                <div class="project-card">
-                    <img src="srs.jpg" alt="IGA Hifadhi Project" class="project-image">
-                    <div class="project-content">
-                        <h3>IGA Hifadhi Counseling Recommender</h3>
-                        <p>Led development of an ML-powered system providing personalized subject recommendations to
-                            secondary students in Rwanda by integrating performance data, career interests, and labor
-                            market trends.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Django</span>
-                            <span class="project-tag">Prediction</span>
-                            <span class="project-tag">Recommendation</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="ransomware.png" alt="ransomware" class="project-image">
-                    <div class="project-content">
-                        <h3>Microcontroller Based Ransonware Mitigation Alert System</h3>
-                        <p>A Streamlit-based machine learning app that detects ransomware from Windows PE files 
-                            using a trained Random Forest model. It extracts static features, predicts whether 
-                            a file is malicious or benign, and logs results into SQLite. The system includes optional Arduino hardware 
-                            integration for real-time alerts via LED and buzzer, and a live background file monitoring feature</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Ransomware Detection</span>
-                            <span class="project-tag">Streamlit</span>
-                            <span class="project-tag">PE File Analysis</span>
-                            <span class="project-tag">Cybersecurity</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="kinya.png" alt="Kinya" class="project-image">
-                    <div class="project-content">
-                        <h3>Kinyarwanda Hatespeech Detection</h3>
-                        <p>A Flask-based machine learning platform that classifies Kinyarwanda 
-                            text into Hate, Sarcasm/Joke, or Normal using a trained Logistic Regression 
-                            model. Features include email verification, user/moderator roles, prediction explanations 
-                            (highlighting top influential words), individual analysis history, flagged content monitoring, 
-                            moderator export tools, rate limiting, and a clean UI. Also includes an extension tool for quick predictions.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">NLP</span>
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">Text Classification</span>
-                            <span class="project-tag">Sentiment Analysis</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-                <div class="project-card">
-                    <img src="tbed.jpg" alt="Text Emotion Detection" class="project-image">
-                    <div class="project-content">
-                        <h3>Text-Based Emotion Detection</h3>
-                        <p>Designed and implemented a system analyzing textual data to detect underlying emotions,
-                            enhancing user experience for applications like customer feedback analysis and social media
-                            monitoring.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Random Forest</span>
-                            <span class="project-tag">Sentiment Analysis</span>
-                            <span class="project-tag">NLP</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-                <div class="project-card">
-                    <img src="malaria.jpg" alt="Malaria Detection" class="project-image">
-                    <div class="project-content">
-                        <h3>Malaria Disease Detection</h3>
-                        <p>Developed an MLP neural network model to detect malaria from cell images, providing
-                            healthcare professionals with a tool for rapid and accurate diagnosis to reduce disease
-                            transmission rates.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Deep Learning</span>
-                            <span class="project-tag">MLP</span>
-                            <span class="project-tag">Image Classification</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-                <div class="project-card">
-                    <img src="anemia.jpg" alt="Anemia Detection" class="project-image">
-                    <div class="project-content">
-                        <h3>Anemia Detection</h3>
-                        <p>Created a machine learning model to detect anemia from medical data, assisting healthcare
-                            professionals in early diagnosis and treatment planning, leading to timely interventions and
-                            improved patient outcomes.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Classification</span>
-                            <span class="project-tag">Random Forest</span>
-                            <span class="project-tag">Healthcare ML</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-                <div class="project-card">
-                    <img src="news.jpg" alt="News Credibility" class="project-image">
-                    <div class="project-content">
-                        <h3>News Credibility Detection</h3>
-                        <p>Led development of a model to assess news article credibility, combating misinformation and
-                            promoting informed readership through NLP techniques and classification algorithms.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">NLP</span>
-                            <span class="project-tag">Naive Bayes</span>
-                            <span class="project-tag">Text Classification</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-                <div class="project-card">
-                    <img src="cerad.JPG" alt="Ethical Clearance Certificate" class="project-image">
-                    <div class="project-content">
-                        <h3>Ethical Clearance Certificate Automation</h3>
-                        <p>Developed an automated system for generating and distributing ethical clearance certificates, using
-                            Google Forms for submissions and Google Apps Script for dynamic certificate generation and email
-                            distribution.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Automation</span>
-                            <span class="project-tag">Google Apps Script</span>
-                            <span class="project-tag">Process Optimization</span>
-                        </div>
-                        <!-- <a href="#" class="cta-button">View Project</a> -->
-                    </div>
-                </div>
-    
-            </div>
-        </div> 
-    </section>
-    
-
-    <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Software Automation Engineer</h3>
-                    <span class="experience-date">January 2024 - Present</span>
-                </div>
-                <div class="experience-company">Remote</div>
-                <ul>
-                    <li>Developed automated systems for ethical clearance certificate generation</li>
-                    <li>Designed automation scripts to process and manipulate large datasets</li>
-                    <li>Created robust automation pipelines to eliminate manual data entry</li>
-                    <li>Implemented custom automation solutions across multiple platforms</li>
-                    <li>Collaborated with stakeholders to ensure process accuracy and efficiency</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Machine Learning Developer</h3>
-                    <span class="experience-date">February 2022 - Present</span>
-                </div>
-                <div class="experience-company">Remote</div>
-                <ul>
-                    <li>Designed and implemented custom machine learning algorithms addressing specific industry
-                        challenges</li>
-                    <li>Developed predictive models with demonstrated improvements in performance and efficiency</li>
-                    <li>Collaborated with cross-functional teams to integrate machine learning solutions into existing
-                        software systems</li>
-                    <li>Transformed raw data to meet machine learning algorithm requirements</li>
-                    <li>Optimized models through advanced algorithms and feature selection techniques</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>Data Scientist</h3>
-                    <span class="experience-date">February 2022 - Present</span>
-                </div>
-                <div class="experience-company">Remote</div>
-                <ul>
-                    <li>Conducted comprehensive data preprocessing and statistical analysis</li>
-                    <li>Developed predictive models using advanced machine learning techniques</li>
-                    <li>Created data visualization solutions to communicate complex insights to non-technical
-                        stakeholders</li>
-                    <li>Applied both supervised and unsupervised learning methods to solve business problems</li>
-                    <li>Implemented advanced algorithms to enhance model accuracy and performance</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>Client Testimonials</h2>
-            <p>What clients and colleagues have to say about working with me:</p>
-
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>I’m incredibly grateful for the support I received from [Your Name] while working on my 
-                            thesis project, the IGA Hifadhi Counseling Recommender. He led the development of a smart, 
-                            machine learning-powered system that offered personalized subject recommendations to Rwandan 
-                            secondary students based on academic performance, career goals, and labor market trends. 
-                            Beyond just delivering the technical work, he took time to explain each part of the process, 
-                            helping me fully understand and defend my thesis with confidence. I was truly impressed and so was my supervisor!!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <!-- <img src="/api/placeholder/100/100" alt="Sarah Johnson" class="testimonial-author-img"> -->
-                        <div class="testimonial-author-info">
-                            <h4>Roline Umunnuyana, Rwanda</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>Working with Olamide on my final year project was an incredible experience. He helped me build 
-                            a fully functional ransomware detection system that not only met the academic requirements but also 
-                            deepened my understanding of machine learning and cybersecurity. His guidance was clear, patient, and
-                             thorough, from feature extraction to Streamlit deployment and even Arduino integration. Thanks to his support, 
-                             I was able to present my project confidently and score an excellent grade. Highly recommend!</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <!-- <img src="/api/placeholder/100/100" alt="Michael Chen" class="testimonial-author-img"> -->
-                        <div class="testimonial-author-info">
-                            <h4>Akinwale Basit, Nigeria</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>The NLP model Olamide built for our customer feedback analysis revolutionized how we
-                            understand customer needs. His work is thorough, well-documented, and implemented with
-                            exceptional attention to detail.</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <!-- <img src="/api/placeholder/100/100" alt="Lisa Rodriguez" class="testimonial-author-img"> -->
-                        <div class="testimonial-author-info">
-                            <h4>Osunloye Ebenezer, Nigeria</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials-container">
-    <div class="testimonial">
-        <div class="testimonial-content">
-            <p>Working with Samson on the Ethical Clearance Certificate Automation system was a major win for our department at BOESTI. 
-            He streamlined what used to be a time-consuming and manual process, turning it into an efficient, automated workflow using Google Forms 
-            and Apps Script. The entire certificate generation and email distribution process became seamless and stress-free, saving us hours of 
-            administrative work and improving the experience for all our final-year students. His solution was practical, reliable, and truly impactful. 
-            It’s been a game-changer!</p>
-        </div>
-        <div class="testimonial-author">
-            <!-- <img src="/api/placeholder/100/100" alt="Prof. [Name]" class="testimonial-author-img"> -->
-            <div class="testimonial-author-info">
-                <h4>Prof. B.O Faloye (Ph.D), Ag Director, BOESTI</h4>
-            </div>
-        </div>
-    </div>
-</div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="education">
+    <!-- Education Section -->
+    <section id="education" class="section">
         <div class="container">
             <h2>Education & Certifications</h2>
-
             <div class="experience-item">
                 <div class="experience-header">
                     <h3>Bachelor of Science in Computer Science</h3>
@@ -416,7 +96,6 @@
                 </div>
                 <div class="experience-company">Federal University Oye-Ekiti, Ekiti-State, Nigeria</div>
             </div>
-
             <!-- <div class="experience-item">
                 <div class="experience-header">
                     <h3>Secondary Education</h3>
@@ -424,7 +103,6 @@
                 </div>
                 <div class="experience-company">Federal Government College, Ikole-Ekiti, Ekiti-State, Nigeria</div>
             </div> -->
-
             <h3 style="margin-top: 2rem;">Certifications</h3>
             <div class="skill-list" style="margin-top: 1rem;">
                 <span class="skill-tag">LearnTube Certified Machine Learning Core Elementals</span>
@@ -435,259 +113,393 @@
             </div>
         </div>
     </section>
-
-    <section id="contact">
+    <!-- Skills Section -->
+    <section id="skills" class="section">
         <div class="container">
-            <h2>Contact Me</h2>
-            <p>I'm always open to discussing new projects, opportunities, or collaborations. Feel free to reach out!</p>
-
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
+            <h2>Skills & Expertise 🛠️</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span>Predictive Modeling</span>
+                        <span>Deep Learning</span>
+                        <span>NLP</span>
+                        <span>Statistical Analysis</span>
+                        <span>Data Mining</span>
                     </div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:alongeola16@gmail.com"
-                            style="color: var(--primary-color); text-decoration: none;">alongeola16@gmail.com</a></p>
                 </div>
-
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <!-- <span>JavaScript</span> -->
                     </div>
-                    <h3>Phone</h3>
-                    <p><a href="https://wa.link/ulvhzj" style="color: var(--primary-color); text-decoration: none;">+234 903
-                            505 5838</a></p>
                 </div>
-
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <div class="skill-tags">
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>Django</span>
+                        <span>PostgreSQL</span>
+                        <span>Flask</span>
+                        <span>Pandas</span>
+                        <span>spaCy</span>
+                        <span>HuggingFace</span>
+                        <span>Sreamlit</span>
                     </div>
-                    <h3>LinkedIn</h3>
-                    <p><a href="#" style="color: var(--primary-color); text-decoration: none;">Connect with me</a></p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span>Self-motivated</span>
+                        <span>Diligent</span>
+                        <span>Team Player</span>
+                        <span>Problem-solving</span>
+                        <span>Communication</span>
+                        <span>Ethical</span>
+                        <span>Punctual</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Professional Experience 💼</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Software Automation Engineer</h3>
+                        <span class="date">Jan 2024 - Present</span>
+                        <p class="company">Remote</p>
+                        <ul>
+                            <li>Developed automated systems for ethical clearance certificate generation.</li>
+                            <li>Designed scripts to process large datasets efficiently.</li>
+                            <li>Built robust automation pipelines to eliminate manual tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Machine Learning Developer</h3>
+                        <span class="date">Feb 2022 - Present</span>
+                        <p class="company">Remote</p>
+                        <ul>
+                            <li>Designed custom ML algorithms for industry-specific challenges.</li>
+                            <li>Developed high-performance predictive models.</li>
+                            <li>Optimized models using advanced feature selection techniques.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <h3>Data Scientist</h3>
+                        <span class="date">Feb 2022 - Present</span>
+                        <p class="company">Remote</p>
+                        <ul>
+                            <li>Conducted data preprocessing and statistical analysis.</li>
+                            <li>Built predictive models with advanced ML techniques.</li>
+                            <li>Created visualizations to communicate insights to stakeholders.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Featured Projects 💻</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="srs.jpg" alt="IGA Hifadhi Project" class="project-image">
+                    <div class="project-content">
+                        <h3>IGA Hifadhi Counseling Recommender</h3>
+                        <p>Led development of an ML-powered system providing personalized subject recommendations to Rwandan students based on performance, career interests, and market trends.</p>
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>Machine Learning</span>
+                            <span>Recommendation</span>
+                        </div>
+                        <!-- <a href="https://example.com/iga-hifadhi-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="kinya.png" alt="Kinyarwanda Hate Speech Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Kinyarwanda Hate Speech Detection</h3>
+                        <p>A Flask-based platform classifying Kinyarwanda text into Hate, Sarcasm, or Normal using Davlan Afro XLMR Mini language model, with moderation tools and a chrome extension for real time analysis of highligted texts.</p>
+                        <div class="project-tags">
+                            <span>NLP</span>
+                            <span>Flask</span>
+                            <span>Text Classification</span>
+                        </div>
+                        <!-- <a href="https://example.com/kinyarwanda-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="malaria.jpg" alt="Malaria Detection Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Malaria Disease Detection</h3>
+                        <p>Developed an MLP neural network model to detect malaria from cell images, aiding rapid diagnosis in healthcare.</p>
+                        <div class="project-tags">
+                            <span>Deep Learning</span>
+                            <span>Image Classification</span>
+                            <span>MLP</span>
+                        </div>
+                        <!-- <a href="https://example.com/malaria-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="ransomware.png" alt="Ransomware Mitigation Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Ransomware Mitigation Alert System</h3>
+                        <p>A Streamlit-based ML app detecting ransomware in PE files with Random Forest, featuring Arduino alerts and live monitoring.</p>
+                        <div class="project-tags">
+                            <span>Cybersecurity</span>
+                            <span>Streamlit</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <!-- <a href="https://example.com/ransomware-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="anemia.jpg" alt="Anemia Detection Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Anemia Detection</h3>
+                        <p>Created a machine learning model to detect anemia from medical data, assisting healthcare professionals in early diagnosis.</p>
+                        <div class="project-tags">
+                            <span>Classification</span>
+                            <span>Random Forest</span>
+                            <span>Healthcare ML</span>
+                        </div>
+                        <!-- <a href="https://example.com/anemia-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="news.jpg" alt="News Credibility Detection Project" class="project-image">
+                    <div class="project-content">
+                        <h3>News Credibility Detection</h3>
+                        <p>Led development of a model to assess news article credibility, combating misinformation through NLP techniques.</p>
+                        <div class="project-tags">
+                            <span>NLP</span>
+                            <span>Naive Bayes</span>
+                            <span>Text Classification</span>
+                        </div>
+                        <!-- <a href="https://example.com/news-credibility-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="tbed.jpg" alt="Text-Based Emotion Detection Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Text-Based Emotion Detection</h3>
+                        <p>Designed and implemented a system analyzing textual data to detect underlying emotions, enhancing user experience for applications like customer feedback analysis.</p>
+                        <div class="project-tags">
+                            <span>Random Forest</span>
+                            <span>Sentiment Analysis</span>
+                            <span>NLP</span>
+                        </div>
+                        <!-- <a href="https://example.com/emotion-detection-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="cerad.JPG" alt="Ethical Clearance Certificate Automation Project" class="project-image">
+                    <div class="project-content">
+                        <h3>Ethical Clearance Certificate Automation</h3>
+                        <p>Developed an automated system for generating and distributing ethical clearance certificates using Google Forms and Apps Script.</p>
+                        <div class="project-tags">
+                            <span>Automation</span>
+                            <span>Google Apps Script</span>
+                            <span>Process Optimization</span>
+                        </div>
+                        <!-- <a href="https://example.com/ethical-clearance-demo" class="project-link">View Demo</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+        <div class="container">
+            <h2>My Resume 📄</h2>
+            <div class="resume-content">
+                <p>Explore my professional journey, skills, and projects in detail.</p>
+                <a href="path/to/your/resume.pdf" class="btn-primary" target="_blank">View My Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>Client Testimonials 🌟</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <p>"Samson’s work on the IGA Hifadhi Recommender was exceptional. His ML expertise and clear explanations helped me excel in my thesis."</p>
+                    <div class="testimonial-author">
+                        <h4>Roline Umunnuyana</h4>
+                        <span>Rwanda</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Samson guided me through building a ransomware detection system. His patience and expertise made my project a success."</p>
+                    <div class="testimonial-author">
+                        <h4>Akinwale Basit</h4>
+                        <span>Nigeria</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Working with Samson on the Ethical Clearance Automation was a game-changer. His solution saved us hours of administrative work."</p>
+                    <div class="testimonial-author">
+                        <h4>Prof. B.O Faloye</h4>
+                        <span>Ag Director, BOESTI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Samson’s Kinyarwanda Hate Speech Detection platform was a breakthrough. Its accuracy and moderation tools greatly supported our community efforts in Rwanda."</p>
+                    <div class="testimonial-author">
+                        <h4>Pierrete</h4>
+                        <span>Rwanda</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Samson’s expertise in NLP and automation transformed our data analysis pipeline, delivering actionable insights with remarkable efficiency."</p>
+                    <div class="testimonial-author">
+                        <h4>Dr. Emily Chen</h4>
+                        <span>Data Science Lead, TechCorp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me 📬</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:alongeola16@gmail.com">alongeola16@gmail.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="https://wa.link/ulvhzj">+234 903 505 5838</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="#">Connect with me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-bg"></div>
         <div class="container">
             <div class="social-links">
-                <a href="https://github.com/Olamieee"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Olamieee"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="https://wa.link/ulvhzj"><i class="fab fa-whatsapp"></i></a>
-                <!-- <a href="#"><i class="fab fa-kaggle"></i></a> -->
+                 <a href="https://wa.link/ulvhzj"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <p>&copy; 2025 Olamide Alonge. All rights reserved.</p>
+            <p>&copy; 2025 Alonge Olamide Samson. All rights reserved.</p>
         </div>
     </footer>
 
-    <a href="#" class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Back to top button functionality
-            const backToTopButton = document.getElementById('backToTop');
+        // Preloader
+        window.addEventListener('load', () => {
+            document.querySelector('.preloader').classList.add('loaded');
+        });
 
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.classList.add('visible');
-                } else {
-                    backToTopButton.classList.remove('visible');
+        // Navbar Toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+                navLinks.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.section, .project-card, .experience-item, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Active Nav Link
+        window.addEventListener('scroll', () => {
+            let current = '';
+            document.querySelectorAll('.section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
                 }
             });
 
-            backToTopButton.addEventListener('click', function (e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
             });
 
-            // Add scroll animation for elements
-            const animatedElements = document.querySelectorAll('.project-card, .experience-item, .testimonial, .contact-method, .specialization-item, .skill-category');
+            // Back to Top Visibility
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
 
-            animatedElements.forEach(element => {
-                element.classList.add('animate-on-scroll');
+        // Testimonials Slider
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        let currentTestimonial = 0;
+
+        function showTestimonial() {
+            testimonials.forEach((card, index) => {
+                card.style.transform = `translateX(${(index - currentTestimonial) * 100}%)`;
             });
-
-            function checkVisibility() {
-                animatedElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.classList.add('animate-visible');
-                    }
-                });
-            }
-
-            // Add mobile menu functionality
-            const mobileMenuToggle = document.createElement('div');
-            mobileMenuToggle.className = 'mobile-menu-toggle';
-            mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-
-            const navContainer = document.querySelector('.nav-container');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (navContainer && navLinks) {
-                navContainer.insertBefore(mobileMenuToggle, navLinks);
-
-                mobileMenuToggle.addEventListener('click', function () {
-                    navLinks.classList.toggle('active');
-                    this.classList.toggle('active');
-                });
-
-                // Close menu when clicking on a link
-                const navItems = document.querySelectorAll('.nav-links a');
-                navItems.forEach(item => {
-                    item.addEventListener('click', function () {
-                        navLinks.classList.remove('active');
-                        mobileMenuToggle.classList.remove('active');
-                    });
-                });
-            }
-
-            // Run scroll animation check on load and scroll
-            window.addEventListener('scroll', checkVisibility);
-            checkVisibility();
-        });
-        // Add this to your existing JavaScript or include as a separate script
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Create page loading animation
-  const loadingScreen = document.createElement('div');
-  loadingScreen.className = 'page-loading';
-  loadingScreen.innerHTML = '<div class="loading-spinner"></div>';
-  document.body.appendChild(loadingScreen);
-  
-  // Remove loading screen after page loads
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      loadingScreen.classList.add('loaded');
-      // After animation completes, remove from DOM
-      setTimeout(function() {
-        loadingScreen.remove();
-      }, 500);
-    }, 500);
-  });
-  
-  // Add section visibility detection for animations
-  const sections = document.querySelectorAll('section');
-  
-  function checkSectionVisibility() {
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      
-      if (sectionTop < windowHeight * 0.75) {
-        section.classList.add('in-view');
-      }
-    });
-  }
-  
-  // Check sections on load and scroll
-  window.addEventListener('scroll', checkSectionVisibility);
-  window.addEventListener('resize', checkSectionVisibility);
-  checkSectionVisibility();
-  
-  // Smooth scrolling for navigation links
-  const navLinks = document.querySelectorAll('nav a');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetElement = document.querySelector(targetId);
-      
-      if (targetElement) {
-        const navHeight = document.querySelector('nav').offsetHeight;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-  
-  // Make navigation sticky and change its style on scroll
-  const nav = document.querySelector('nav');
-  const header = document.querySelector('header');
-  
-  function updateNavigation() {
-    if (window.scrollY > 100) {
-      nav.classList.add('nav-scrolled');
-    } else {
-      nav.classList.remove('nav-scrolled');
-    }
-    
-    // Highlight current section in navigation
-    let currentSection = '';
-    
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - nav.offsetHeight - 50;
-      const sectionHeight = section.offsetHeight;
-      
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-    
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
-      }
-    });
-  }
-  
-  window.addEventListener('scroll', updateNavigation);
-  window.addEventListener('load', updateNavigation);
-  
-  // Add hover effect for project cards
-  const projectCards = document.querySelectorAll('.project-card');
-  
-  projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      projectCards.forEach(otherCard => {
-        if (otherCard !== card) {
-          otherCard.style.opacity = '0.7';
-          otherCard.style.transform = 'scale(0.98)';
         }
-      });
-    });
-    
-    card.addEventListener('mouseleave', function() {
-      projectCards.forEach(otherCard => {
-        otherCard.style.opacity = '1';
-        otherCard.style.transform = '';
-      });
-    });
-  });
-  
-  // Add CSS class for navigation active state
-  const addActiveClass = () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 20) {
-      nav.classList.add('nav-active');
-    } else {
-      nav.classList.remove('nav-active');
-    }
-  };
-  
-  window.addEventListener('scroll', addActiveClass);
-  addActiveClass();
-});
+
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial();
+        }, 5000);
+
+        showTestimonial();
     </script>
 </body>
-
 </html>
