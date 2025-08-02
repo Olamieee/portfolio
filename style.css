@@ -691,6 +691,7 @@ header {
 .testimonials-slider {
     position: relative;
     overflow: hidden;
+    width: 100%;
     display: flex;
     gap: 24px;
 }
@@ -700,20 +701,25 @@ header {
     padding: 24px;
     border-radius: var(--border-radius-lg);
     box-shadow: var(--shadow-md);
-    min-width: 360px;
-    transition: transform 0.6s ease;
-    position: relative;
+    flex: 0 0 calc(50% - 12px); /* 2 cards on desktop */
     opacity: 0;
-    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateX(100%);
+    display: none;
 }
 
-.testimonial-card.visible {
+.testimonial-card.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+    display: block;
+}
+
+.testimonial-card.prev {
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .testimonial-card:hover {
-    transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     background: linear-gradient(135deg, #fff 0%, #f3e8ff 100%);
 }
@@ -931,10 +937,34 @@ footer p {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .project-card {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        visibility: visible !important;
+        display: flex !important;
+    }
+    
+    .project-image {
+        height: 180px;
     }
 
+    .testimonials-slider {
+        overflow: hidden;
+        width: 100%;
+    }
     .testimonial-card {
         min-width: 100%;
+        transform: translateX(100%);
+        flex: 0 0 100%;
+    }
+    .testimonial-card.visible {
+        transform: translateX(0);
+    }
+    .testimonials-slider {
+        gap: 0;
     }
 }
 
@@ -948,7 +978,7 @@ footer p {
         font-size: 0.9rem;
     }
 
-    .project-card, .skill-category, .experience-content, .testimonial-card, .contact-card {
+    .skill-category, .experience-content, .testimonial-card, .contact-card {
         padding: 16px;
     }
 
@@ -956,10 +986,18 @@ footer p {
         font-size: 1.8rem;
     }
 
-    .project-image {
-        height: 180px;
+    .project-card {
+        padding: 16px;
+        margin-bottom: 20px;
     }
-
+    
+    .project-image {
+        height: 160px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
     .avatar {
         width: 150px;
         height: 150px;
