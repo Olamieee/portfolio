@@ -447,137 +447,109 @@
     <a href="#home" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
 
     <script>
-        // Preloader
-        window.addEventListener('load', () => {
-            document.querySelector('.preloader').classList.add('loaded');
+    // Preloader
+    window.addEventListener('load', () => {
+        document.querySelector('.preloader').classList.add('loaded');
+        document.querySelectorAll('.project-card').forEach(card => card.classList.add('loaded'));
+    });
+
+    // Navbar Toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        navToggle.classList.toggle('active');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+            navLinks.classList.remove('active');
+            navToggle.classList.remove('active');
         });
+    });
 
-        // Navbar Toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navToggle.classList.toggle('active');
+    // Scroll Animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
+    }, { threshold: 0.2 });
 
-        // Smooth Scroll
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const target = document.querySelector(link.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-                navLinks.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
+    document.querySelectorAll('.section, .project-card, .experience-item, .testimonial-card').forEach(el => {
+        observer.observe(el);
+        if (el.getBoundingClientRect().top <= window.innerHeight) {
+            el.classList.add('visible');
+        }
+    });
 
-        // Scroll Animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll('.section, .project-card, .experience-item, .testimonial-card').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Active Nav Link
-        window.addEventListener('scroll', () => {
-            let current = '';
-            document.querySelectorAll('.section').forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 100) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-
-            // Back to Top Visibility
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 500) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
+    // Active Nav Link
+    window.addEventListener('scroll', () => {
+        let current = '';
+        document.querySelectorAll('.section').forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (pageYOffset >= sectionTop - 100) {
+                current = section.getAttribute('id');
             }
         });
 
-        // Testimonials Slider
-        // const testimonials = document.querySelectorAll('.testimonial-card');
-        // let currentTestimonial = 0;
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
 
-        // function showTestimonial() {
-        //     testimonials.forEach((card, index) => {
-        //         card.classList.remove('active', 'prev');
-
-        //         if (index === currentTestimonial) {
-        //             card.classList.add('active');
-        //         } else if (index < currentTestimonial) {
-        //             card.classList.add('prev');
-        //         }
-        //     });
-        // }
-
-        // function nextTestimonial() {
-        //     currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-        //     showTestimonial();
-        // }
-
-        // // Initialize first testimonial
-        // if (testimonials.length > 0) {
-        //     testimonials[0].classList.add('active');
-        //     setInterval(nextTestimonial, 3500); // Change every 3.5 seconds
-        // }
-
-const testimonials = document.querySelectorAll('.testimonial-card');
-let currentTestimonial = 0;
-
-function getCardsPerView() {
-    return window.innerWidth <= 768 ? 1 : 2; // 1 card on mobile, 2 on desktop
-}
-
-function showTestimonials() {
-    const cardsPerView = getCardsPerView();
-    
-    // Hide all cards first
-    testimonials.forEach(card => {
-        card.classList.remove('active');
+        // Back to Top Visibility
+        const backToTop = document.querySelector('.back-to-top');
+        if (window.scrollY > 500) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
     });
-    
-    // Show current set of cards
-    for (let i = 0; i < cardsPerView; i++) {
-        const cardIndex = (currentTestimonial + i) % testimonials.length;
-        if (testimonials[cardIndex]) {
-            testimonials[cardIndex].classList.add('active');
+
+    // Testimonials Slider
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentTestimonial = 0;
+
+    function getCardsPerView() {
+        return window.innerWidth <= 768 ? 1 : 2;
+    }
+
+    function showTestimonials() {
+        const cardsPerView = getCardsPerView();
+        testimonials.forEach(card => card.classList.remove('active'));
+        for (let i = 0; i < cardsPerView; i++) {
+            const cardIndex = (currentTestimonial + i) % testimonials.length;
+            if (testimonials[cardIndex]) {
+                testimonials[cardIndex].classList.add('active');
+            }
         }
     }
-}
 
-function nextTestimonials() {
-    const cardsPerView = getCardsPerView();
-    currentTestimonial = (currentTestimonial + cardsPerView) % testimonials.length;
+    function nextTestimonials() {
+        const cardsPerView = getCardsPerView();
+        currentTestimonial = (currentTestimonial + cardsPerView) % testimonials.length;
+        showTestimonials();
+    }
+
+    // Initialize
     showTestimonials();
-}
 
-// Initialize
-showTestimonials();
+    // Auto-slide every 4 seconds
+    setInterval(nextTestimonials, 4000);
 
-// Auto-slide every 4 seconds
-setInterval(nextTestimonials, 4000);
-
-// Handle window resize
-window.addEventListener('resize', () => {
-    showTestimonials();
-});
-    </script>
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        showTestimonials();
+    });
+</script>
 </body>
 
 </html>
