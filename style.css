@@ -868,23 +868,15 @@ footer p {
 
     /* Header */
     header {
-        height: 80vh; /* Reduced from 100vh for better fit on tablets */
-        padding: 60px 0;
+        height: 90vh; /* Slightly reduced from 100vh for better fit on tablets */
     }
 
     .typewriter {
-        font-size: clamp(2.2rem, 5vw, 3rem);
-        white-space: nowrap; /* Ensure name stays on one line */
-    }
-
-    .header-content h1 {
-        margin: 0;
-        padding: 0;
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
     }
 
     .subheading {
-        font-size: clamp(1rem, 2vw, 1.3rem);
-        margin: 15px 0;
+        font-size: clamp(1.1rem, 2.5vw, 1.6rem);
     }
 
     /* About */
@@ -960,62 +952,59 @@ footer p {
     }
 
     /* Navbar */
+    .navbar {
+        position: fixed; /* Keep fixed but optimize */
+        height: 60px; /* Reduced height for mobile */
+        padding: 12px 16px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 0;
         width: 100%;
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         flex-direction: column;
-        padding: 24px;
+        padding: 20px;
         box-shadow: var(--shadow-sm);
     }
 
     .nav-links.active {
         display: flex;
-        gap: 16px;
+        gap: 12px;
     }
 
     .nav-toggle {
         display: flex;
     }
 
+    .nav-toggle span {
+        width: 24px;
+        height: 2px;
+    }
+
     /* Header */
     header {
-        height: auto; /* Auto height for mobile */
-        padding: 60px 0 40px;
-        position: relative;
+        height: 80vh; /* Adjusted for mobile */
+        padding: 60px 0;
     }
 
     .typewriter {
-        font-size: clamp(1.8rem, 6vw, 2.5rem);
-        white-space: nowrap; /* Keep name on one line */
+        font-size: clamp(2rem, 6vw, 3rem);
+        white-space: nowrap;
         overflow: hidden;
-        border-right: 2px solid var(--primary-color); /* Restore border for effect */
+        border-right: 4px solid var(--primary-color);
         animation: typewriter 3s steps(30, end), blink 0.7s step-end infinite;
     }
 
-    .header-content h1 {
-        font-size: clamp(1.6rem, 5vw, 2.2rem);
-        margin: 0;
-        padding: 0 10px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1; /* Ensure it stays behind typewriter */
-        opacity: 0; /* Hide static name, let typewriter handle it */
-    }
-
-    .header-content {
-        position: relative;
-        text-align: center;
-    }
-
     .subheading {
-        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
         margin: 15px 0;
         padding: 0 10px;
     }
@@ -1118,14 +1107,24 @@ footer p {
         padding: 0 12px;
     }
 
+    /* Navbar */
+    .navbar {
+        height: 50px;
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
     /* Header */
     header {
-        padding: 40px 0 30px;
+        height: 70vh;
+        padding: 40px 0;
     }
 
     .typewriter {
-        font-size: clamp(1.4rem, 5vw, 1.8rem);
-        padding: 0 5px;
+        font-size: clamp(1.5rem, 5vw, 2rem);
     }
 
     .subheading {
@@ -1139,7 +1138,7 @@ footer p {
     }
 
     .project-content h3 {
-        font-size: 1rem;
+        font-size 1rem;
     }
 
     .project-content p {
