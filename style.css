@@ -866,9 +866,30 @@ footer p {
         padding: 0 20px;
     }
 
+    /* Header */
+    header {
+        height: 80vh; /* Reduced from 100vh for better fit on tablets */
+        padding: 60px 0;
+    }
+
+    .typewriter {
+        font-size: clamp(2.2rem, 5vw, 3rem);
+        white-space: nowrap; /* Ensure name stays on one line */
+    }
+
+    .header-content h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .subheading {
+        font-size: clamp(1rem, 2vw, 1.3rem);
+        margin: 15px 0;
+    }
+
     /* About */
     .about-content {
-        grid-template-columns: 1fr 1fr; /* Two columns instead of three */
+        grid-template-columns: 1fr 1fr;
     }
 
     .about-image {
@@ -963,22 +984,34 @@ footer p {
 
     /* Header */
     header {
-        height: auto;
-        padding: 80px 0;
+        height: auto; /* Auto height for mobile */
+        padding: 60px 0 40px;
+        position: relative;
     }
 
     .typewriter {
         font-size: clamp(1.8rem, 6vw, 2.5rem);
-        white-space: normal;
-        overflow: visible;
-        border-right: none; /* Remove border to avoid cutoff */
-        animation: none; /* Disable typewriter effect on mobile */
+        white-space: nowrap; /* Keep name on one line */
+        overflow: hidden;
+        border-right: 2px solid var(--primary-color); /* Restore border for effect */
+        animation: typewriter 3s steps(30, end), blink 0.7s step-end infinite;
     }
 
     .header-content h1 {
         font-size: clamp(1.6rem, 5vw, 2.2rem);
         margin: 0;
-        padding: 0 10px; /* Prevent cutoff */
+        padding: 0 10px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1; /* Ensure it stays behind typewriter */
+        opacity: 0; /* Hide static name, let typewriter handle it */
+    }
+
+    .header-content {
+        position: relative;
+        text-align: center;
     }
 
     .subheading {
@@ -1086,8 +1119,8 @@ footer p {
     }
 
     /* Header */
-    .header-content {
-        padding: 0 10px;
+    header {
+        padding: 40px 0 30px;
     }
 
     .typewriter {
