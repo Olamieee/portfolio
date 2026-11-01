@@ -1,0 +1,2 @@
+GSAP is used under its Standard 'no charge' license: https://gsap.com/standard-license
+Motion (motion.dev) is MIT licensed.

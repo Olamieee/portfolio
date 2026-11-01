@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><rect width="640" height="640" fill="#ecebe4"/>
+<text x="58" y="54" font-family="monospace" font-size="19" fill="#555">PER-CLASS F1 · YORUBA TEST SET</text>
+<line x1="58" y1="520.0" x2="616" y2="520.0" stroke="#d6d4c8"/><text x="50" y="525.0" text-anchor="end" font-family="monospace" font-size="14" fill="#777">0.0</text>
+<line x1="58" y1="414.0" x2="616" y2="414.0" stroke="#d6d4c8"/><text x="50" y="419.0" text-anchor="end" font-family="monospace" font-size="14" fill="#777">0.2</text>
+<line x1="58" y1="308.0" x2="616" y2="308.0" stroke="#d6d4c8"/><text x="50" y="313.0" text-anchor="end" font-family="monospace" font-size="14" fill="#777">0.4</text>
+<line x1="58" y1="202.0" x2="616" y2="202.0" stroke="#d6d4c8"/><text x="50" y="207.0" text-anchor="end" font-family="monospace" font-size="14" fill="#777">0.6</text>
+<line x1="58" y1="96.0" x2="616" y2="96.0" stroke="#d6d4c8"/><text x="50" y="101.0" text-anchor="end" font-family="monospace" font-size="14" fill="#777">0.8</text>
+<rect x="72.0" y="313.3" width="60" height="206.7" rx="6" fill="#111111"/>
+<text x="102.0" y="304.3" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.39</text>
+<text x="102.0" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">anger</text>
+<rect x="169.2" y="355.7" width="60" height="164.3" rx="6" fill="#111111"/>
+<text x="199.2" y="346.7" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.31</text>
+<text x="199.2" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">disgust</text>
+<rect x="266.4" y="350.4" width="60" height="169.6" rx="6" fill="#111111"/>
+<text x="296.4" y="341.4" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.32</text>
+<text x="296.4" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">fear</text>
+<rect x="363.6" y="302.7" width="60" height="217.3" rx="6" fill="#111111"/>
+<text x="393.6" y="293.7" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.41</text>
+<text x="393.6" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">joy</text>
+<rect x="460.8" y="170.2" width="60" height="349.8" rx="6" fill="#2b44ff"/>
+<text x="490.8" y="161.2" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.66</text>
+<text x="490.8" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">sadness</text>
+<rect x="558.0" y="366.3" width="60" height="153.7" rx="6" fill="#111111"/>
+<text x="588.0" y="357.3" text-anchor="middle" font-family="monospace" font-size="17" font-weight="bold" fill="#111">0.29</text>
+<text x="588.0" y="548" text-anchor="middle" font-family="monospace" font-size="13.5" fill="#333">surprise</text>
+<text x="58" y="610" font-family="monospace" font-size="16" fill="#555">macro F1 0.40 · majority baseline 0.165</text></svg>
