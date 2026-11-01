@@ -40,7 +40,7 @@ function Section({ id, n, title, children, className = '' }: { id: string; n: st
         <span className="font-mono text-sm text-cobalt">§{n}</span>
         <ScrollFloat
           containerClassName="!m-0"
-          textClassName="font-display text-[clamp(2.4rem,5.5vw,4.8rem)] font-semibold leading-none tracking-tight"
+          textClassName="font-display text-[clamp(1.9rem,5.5vw,4.8rem)] font-semibold leading-none tracking-tight"
           effect="float" splitBy="chars" stagger={0.02} scrollStart="top 95%" scrollEnd="top 60%"
         >
           {title}
@@ -170,6 +170,7 @@ export default function App() {
         <Dock items={dockItems} theme="light" position="bottom" baseItemSize={46} magnification={70} panelHeight={62} accentColor={COBALT} showIndicators />
       </div>
 
+      <div className="overflow-x-clip">
       {/* ── HERO ──────────────────────────────── */}
       <section id="top" className="relative min-h-[100svh] overflow-hidden pt-24 pb-28">
         <div className="absolute inset-0">
@@ -295,16 +296,16 @@ export default function App() {
                     <h3 className="font-display text-[clamp(2rem,4vw,3.4rem)] leading-none font-semibold tracking-tight">{e.title}</h3>
                     <p className="mt-4 max-w-md opacity-75">{e.desc}</p>
                     <div className="mt-6 flex flex-wrap gap-2">{e.tags.map((t, i) => <Badge key={i} variant="outline" className="rounded-full border-current/30 text-current">{t}</Badge>)}</div>
-                  </div>
-                  <div className="flex flex-wrap items-end justify-between gap-4">
-                    <div><div className="font-display text-5xl font-semibold">{e.metric[0]}</div><div className="font-mono text-xs uppercase opacity-60">{e.metric[1]}</div></div>
                     {e.links.length > 0 && (
-                      <div className="flex flex-wrap justify-end gap-2">
+                      <div className="mt-5 flex flex-wrap gap-2">
                         {e.links.map((l) => (
-                          <a key={l.label} href={l.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-current/30 px-3 py-2 font-mono text-xs uppercase transition-colors hover:bg-current/10">{l.label}<ArrowUpRight size={14} /></a>
+                          <a key={l.label} href={l.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full border border-current/30 px-4 py-2.5 font-mono text-xs uppercase transition-colors hover:bg-current/10">{l.label}<ArrowUpRight size={14} /></a>
                         ))}
                       </div>
                     )}
+                  </div>
+                  <div className="flex flex-wrap items-end justify-between gap-4">
+                    <div><div className="font-display text-5xl font-semibold">{e.metric[0]}</div><div className="font-mono text-xs uppercase opacity-60">{e.metric[1]}</div></div>
                   </div>
                 </div>
                 <div className="hidden p-4 md:block"><img src={e.img} alt="" className="h-full w-full rounded-[20px] object-cover" /></div>
@@ -331,11 +332,11 @@ export default function App() {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {methods.map((m, i) => (
             <PixelCard key={i} theme="light" colors={i % 2 ? [HL, '#ffe98a', '#fff3c2'] : [COBALT, '#6f80ff', '#b8c1ff']} gap={6} speed={40} origin="pointer" radius={18} className="!h-56 !w-full border border-rule bg-white">
-              <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-6">
+              <div className="pointer-events-none absolute inset-0 flex flex-col justify-between p-4 sm:p-6">
                 <m.icon size={34} weight="duotone" color={i % 2 ? INK : COBALT} />
                 <div>
                   <div className="font-mono text-[11px] text-dim">0{i + 1}</div>
-                  <div className="font-display text-2xl font-semibold">{m.label}</div>
+                  <div className="font-display text-lg leading-tight font-semibold break-words sm:text-2xl">{m.label}</div>
                 </div>
               </div>
             </PixelCard>
@@ -353,7 +354,7 @@ export default function App() {
                 <span className="log-dot absolute top-1.5 -left-[33px] size-3.5 rounded-full border-2 border-cobalt sm:-left-[43px]" />
                 <span className="font-mono text-sm text-dim">{r.d}</span>
                 <div>
-                  <div className="font-display text-3xl font-semibold transition-colors group-hover:text-cobalt">{r.role} <span className="text-dim">@ {r.org}</span></div>
+                  <div className="font-display text-xl font-semibold transition-colors group-hover:text-cobalt sm:text-3xl">{r.role} <span className="text-dim">@ {r.org}</span></div>
                   <p className="mt-1 text-dim">{r.note}</p>
                 </div>
               </div>
@@ -388,10 +389,11 @@ export default function App() {
             </div>
           </div>
         </ElectricBorder>
-        <div className="mt-16 flex justify-between border-t border-rule pt-6 font-mono text-[11px] tracking-widest text-dim uppercase">
+        <div className="mt-16 flex flex-col gap-2 border-t border-rule pt-6 sm:flex-row sm:justify-between font-mono text-[11px] tracking-widest text-dim uppercase">
           <span>© 2026 Alonge Olamide Samson</span><span>— end of notebook —</span>
         </div>
       </Section>
+      </div>
     </>
   )
 }
