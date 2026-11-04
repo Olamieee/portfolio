@@ -366,16 +366,16 @@ export default function App() {
       {/* ── CORRESPONDENCE ────────────────────── */}
       <Section id="contact" n="5" title="Correspondence" className="!pb-40">
         <ElectricBorder color={COBALT} theme="light" speed={1} chaos={0.5} thickness={2} borderRadius={28} interactive>
-          <div className="grid gap-10 rounded-[28px] bg-white p-8 sm:p-14 lg:grid-cols-[1.4fr_1fr]">
+          <div className="grid gap-10 rounded-[28px] bg-white p-6 sm:p-14 lg:grid-cols-[1.4fr_1fr] [&>*]:min-w-0">
             <div>
-              <ScrambledText className="!m-0 !max-w-none !font-display !text-[clamp(3rem,8vw,7rem)] !leading-[0.9] !font-semibold !tracking-tight" radius={120} duration={1.1} scrambleChars="01.:/" color={INK} scrambleColor={COBALT}>
+              <ScrambledText className="!m-0 !max-w-none !font-display !text-[clamp(2.4rem,8vw,7rem)] !leading-[0.9] !font-semibold !tracking-tight" radius={120} duration={1.1} scrambleChars="01.:/" color={INK} scrambleColor={COBALT}>
                 Say hello.
               </ScrambledText>
               <p className="mt-6 max-w-md text-lg text-dim">Open to remote machine learning, NLP and data science roles, AI evaluation work, and freelance projects.</p>
             </div>
             <div className="flex flex-col justify-end gap-4">
               <StarBorder as="a" href={URL.email} theme="light" color={COBALT} className="w-full" backgroundColor="#111111" textColor="#f4f3ee" hover="lap">
-                <span className="flex items-center justify-center gap-3 py-1 text-lg"><Envelope size={20} /> alongeola16@gmail.com</span>
+                <span className="flex items-center justify-center gap-2 py-1 text-[13px] whitespace-nowrap min-[360px]:text-[15px] sm:gap-3 sm:text-lg"><Envelope size={20} className="shrink-0" /> alongeola16@gmail.com</span>
               </StarBorder>
               <div className="flex gap-3">
                 {[
@@ -383,7 +383,7 @@ export default function App() {
                   { href: URL.linkedin, label: 'LinkedIn', node: <LinkedinLogo size={22} /> },
                   { href: URL.hf, label: 'Hugging Face', node: <span className="text-xl leading-none">🤗</span> },
                 ].map((l) => (
-                  <a key={l.label} href={l.href} target="_blank" rel="noreferrer" aria-label={l.label} className="grid flex-1 place-items-center rounded-2xl border border-rule py-4 transition-all hover:-translate-y-1 hover:border-cobalt hover:text-cobalt">{l.node}</a>
+                  <a key={l.label} href={l.href} target="_blank" rel="noreferrer" aria-label={l.label} className="grid min-w-0 flex-1 place-items-center rounded-2xl border border-rule py-4 transition-all hover:-translate-y-1 hover:border-cobalt hover:text-cobalt">{l.node}</a>
                 ))}
               </div>
             </div>
